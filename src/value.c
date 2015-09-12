@@ -68,7 +68,6 @@ json_t *json_object(void)
     }
 
     object->serial = 0;
-    object->visited = 0;
 
     return &object->json;
 }
@@ -353,8 +352,6 @@ json_t *json_array(void)
         jsonp_free(array);
         return NULL;
     }
-
-    array->visited = 0;
 
     return &array->json;
 }
